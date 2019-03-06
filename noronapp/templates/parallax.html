@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../static/css/nav-bar-style.css">
+    <title>{% block title %}Parallax{% endblock %}</title>
+
+    <style>
+        @import 'https://fonts.googleapis.com/css?family=Raleway';
+        body{font-family:Raleway; }
+
+
+        .box1{background-image: url("../static/images/tra2.jpeg");}
+        .box2{background-image: url("../static/images/training.jpeg");}
+        .box3{background-image: url("../static/images/meeting.jpeg");}
+        .box4{background-image: url("../static/images/2.jpeg");}
+        .box5{background-image: url("../static/images/contact.jpg");}
+
+        .back{
+            background-repeat: no-repeat;
+            background-position: 50% 0;
+            transition: 0s linear;
+            transition-property: background-position;
+            background-attachment: fixed;
+        }
+
+
+        .bgcolor{
+            width:100%;
+            min-height: 750px;
+            background:rgba(0,0,0,0.7);
+            resize: none;
+            overflow: auto;
+        }
+
+         /* #### scroll button ##### */
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            z-index: 99;
+            font-size: 20px;
+            outline: none;
+            background-color: #336699;
+            color: white;
+            cursor: pointer;
+            padding: 10px 20px 10px 20px;
+            border-radius: 5px;
+
+            -webkit-transition: box-shadow;
+            transition: 0.1s;
+
+        }
+        a{text-decoration: none !important;}
+        #myBtn:hover {
+            box-shadow: 0 0 5px 0 black;
+
+        }
+
+         /* #### scroll button ##### */
+
+
+        /* some text and header style */
+
+        .whitetext {color:white;}
+        /* some text and header style */
+
+        /* #### contact form ##### */
+        * {box-sizing: border-box;}
+
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            background: transparent;
+            color: white;
+        }
+
+        input[type=email]{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            background: transparent;
+            color: white;
+        }
+
+        button[type=submit]{
+            color: white;
+            padding: 12px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            background: transparent;
+            border:solid 1px transparent;
+
+        }
+
+        button[type=submit]:hover {
+            background:transparent;
+            border:solid 1px white;
+        }
+        ::placeholder {
+            color: white;
+            opacity: 0.5;
+            }
+
+        .containers {
+            border-radius: 5px;
+            padding: 20px;
+            margin-top:100px;
+        }
+        label{color:white;}
+         /* #### contact form ##### */
+
+        textarea {resize: none;}
+
+        .box-bar{width: 100%; min-height: 100px; background-color:white; padding-bottom: 20px; }
+        .box-bar p{font-weight: bold;}
+        .social-icon{
+            font-size: 20px;
+            color:#222;
+            border:solid 1px #656565;
+            padding: 13px;
+            border-radius: 100px;
+            background: #656565;
+            margin-top:50px;}
+
+        @media screen and (max-width: 600px) {
+            #mybabo {
+              display: none;
+            }
+            .bgcolor{
+                min-height: 1000px;
+            }
+        }
+        #mybabo{
+            position: fixed;
+            right: 30px;
+            top: 40%;
+            font-weight: bold;
+            padding: 0 20px 0 20px;
+            text-align: center;
+
+        }
+
+        #mybabo p{
+            color:white;
+            background: #336699;
+            padding: 10px;
+            border-radius: 100px;
+            -webkit-transition: color, background-color;
+            transition: 0.2s;
+        }
+
+        #mybabo p:hover{
+            background-color:#e6e6e6;
+            color: #336699;
+        }
+    </style>
+    <script src="../static/js/scroll-link.js"></script>
+    <script>$(window).on('beforeunload', function(){$(window).scrollTop(0);});</script>
+
+</head>
+
+<body id="noronbros">
+<nav class="navbar navbar-default " style="min-height: 70px;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{% url 'home' %}" style="margin-right: 80px; color:#336699;">Templates</a>
+    </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+              <li ><a href="{% url 'home' %}" class="navli">Home</a></li>
+              <li><a href="{% url 'parallax' %}" class="navli">Parallax</a></li>
+              <li class="dropdown">
+                  <a class="dropdown-toggle navli" data-toggle="dropdown" href="#">Landing page<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="{% url 'cooking-landing-page' %}">Cooking</a></li>
+                      <li><a href="{% url 'home-desing-landing-page' %}">Home desing</a></li>
+
+                  </ul>
+              </li>
+
+              <li class="dropdown">
+                  <a class="dropdown-toggle navli" data-toggle="dropdown" href="#">Blog<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="{% url 'blog-page' %}">Blog</a></li>
+                      <li><a href="{% url 'blog-page2' %}">Blog 2</a></li>
+                  </ul>
+              </li>
+              <li class="dropdown">
+                  <a class="dropdown-toggle navli" data-toggle="dropdown" href="#" >Profile page<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="{% url 'profile-page' %}">Profile page</a></li>
+                      <li><a href="{% url 'profile-page2' %}">Profile page2</a></li>
+                  </ul>
+              </li>
+              <li class="dropdown">
+                  <a class="dropdown-toggle navli" data-toggle="dropdown" href="#" >Other page<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="{% url '404-error' %}">404 error page</a></li>
+                      <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                      <li><a href="{% url 'email-template' %}">Email template</a></li>
+                  </ul>
+              </li>
+          </ul>
+    </div>
+  </div>
+</nav>
+
+<a href="#noronbros" title="back to top"><div id="myBtn"><i class="fas fa-angle-up"></i></div></a>
+{% block home %}
+
+<div id="mybabo">
+    <a href="#whatwedo"><p>What we do?</p></a>
+    <a href="#ourprofile" ><p>What you learn?</p></a>
+    <a href="#whatdidwedo" ><p>What you gain?</p></a>
+    <a href="#contactus" ><p>Contact us</p></a>
+</div>
+
+
+<div class="box1 back" style="margin-top: -20px;">
+    <div class="bgcolor">
+        <div class="box-bar">
+            <div class="container" style="text-align: center; padding-top: 50px;">
+            <img src="static/images/icon-training2.png" alt="" width="50px">
+                <h1 style="font-size: 40px;"><b>TRAINING</b></h1>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                    when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution of letters, as opposed to using 'Content here, content here', making it look like
+                    readable English.</p>
+
+                <div class="container" style="margin-top:50px;">
+            <div>
+                <div class="col-sm-6">
+                    <p>
+                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                </div>
+                <div class="col-sm-6">
+                    <p>
+                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
+                        of type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                        but also the leap into electronic typesetting, remaining essentially unchanged.
+                    </p>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="box2 back" id="whatwedo">
+    <div class="bgcolor">
+        <div class="box-bar">
+            <div class="container" style="text-align: center;">
+            <h1>What we do ?</h1>
+                <p style="color:black;"><i>We always try do for the best.</i></p>
+            </div>
+            <div class="container">
+            <div class="col-sm-4 course-box">
+                <h1>Digital marketin</h1>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a
+                    page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less
+                    normal distribution of letters, as opposed to using 'Content here, content here', making it
+                    look like readable English.</p>
+            </div>
+            <div class="col-sm-4 course-box">
+                <h1 >Other courses</h1>
+                <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default
+                    model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+            </div>
+            <div class="col-sm-4 course-box">
+                <h1>Exmaple course</h1>
+                <p>+ Example course 2</p>
+                <p>+ Example course 3</p>
+                <p>+ Example course 4</p>
+            </div>
+        </div>
+        </div>
+        <br>
+    </div>
+</div>
+
+    <div class="box3 back" id="ourprofile" style="color: white">
+     <div class="bgcolor">
+              <div class="box-bar"  style="background: #222;">
+          <div class="container" >
+            <div style="text-align: center; ">
+                <h1 class="whitetext">What you learn ?</h1>
+                 <div style="height:25px">
+                  <a href="#ourprofile"><i class="fas fa-arrow-down whitetext"></i></a>
+              </div>
+            </div>
+
+                       <div class="container">
+               <div class="col-sm-4 course-box" style="text-align: center;">
+                   <h1 style="font-size: 70px; border-bottom:solid 2px #092d4e;">1</h1>
+                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                       Lorem Ipsum has been the industry's standard dummy text ever since the
+                       1500s, when an unknown printer took a galley of type and scrambled it to
+                       make a type specimen book.
+                   </p>
+               </div>
+               <div class="col-sm-4 course-box" style="text-align: center;">
+                    <h1 style="font-size: 70px; border-bottom:solid 2px #092d4e ;">2</h1>
+                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                       Lorem Ipsum has been the industry's standard dummy text ever since the
+                       1500s, when an unknown printer took a galley of type and scrambled it to
+                       make a type specimen book.
+                   </p>
+               </div>
+               <div class="col-sm-4 course-box" style="text-align: center;">
+                    <h1 style="font-size: 70px; border-bottom:solid 2px #092d4e;">3</h1>
+                   <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                       Lorem Ipsum has been the industry's standard dummy text ever since the
+                       1500s, when an unknown printer took a galley of type and scrambled it to
+                       make a type specimen book.
+                   </p>
+               </div>
+        </div>
+          </div>
+           <br>
+
+      </div>
+      </div>
+    </div>
+
+
+    <div class="box4 back" id="whatdidwedo">
+     <div class="bgcolor">
+       <div class="box-bar" style="background: white;">
+          <div class="container" >
+            <div style="text-align: center;"><h1 class="">What you gain?</h1></div>
+              <br>
+              <div class="container">
+             <div class="col-sm-12">
+                    <div class="col-sm-4 course-box2">
+                        <h1>Working Professionals  </h1>
+                        <p>✔ Open gates for multiple industries</p>
+                        <p>✔ Get a plethora of job opportunities in digital marketing industry</p>
+                        <p>✔ Skills and expertise for advanced career growth</p>
+                    </div>
+                    <div class="col-sm-4 course-box2">
+                        <h1 >Entrepreneurs</h1>
+                        <p>✔ Generate more qualified business leads & convert into sales</p>
+                        <p>✔ Increase business revenue with an extra outlet for sales- online</p>
+                        <p>✔ Save up to 60% of advertising cost with online advertising</p>
+                        <p>✔ Track and measure your performance with 100% accuracy</p>
+                    </div>
+                    <div class="col-sm-4 course-box2">
+                        <h1>Job Seekers</h1>
+                        <p>✔ Get an edge over others by learning what others will learn later</p>
+                        <p>✔ Improve your CV and apply for 2.6L job opportunities avaliable by the end of 2018</p>
+                        <p>✔ Every 3rd person is on MBA. Get unique skills that guarantee sucess</p>
+                        <p>✔ Earn commisions as on affiliate marketer</p>
+                    </div>
+             </div>
+        </div>
+
+          </div>
+      </div>
+      </div>
+    </div>
+
+ <div class="box5 back" id="contactus">
+     <div class="bgcolor">
+       <div class="box-bar " style="background: #222">
+          <div class="container">
+            <div style="text-align: center; color: white">
+                <h1>Contact us</h1>
+                <p><i>What do you want from us?</i></p>
+            </div>
+
+              <br>
+          <p style="color:black;"></p>
+          </div>
+      </div>
+         <div class=" container containers">
+                  <form action="" method="POST">{% csrf_token %}
+                      <label for="fname">Name</label>
+                      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                      <label for="lname">Email</label>
+                      <input type="email" id="lname" name="lastname" placeholder="Your email..">
+
+                      <label for="title">Title</label>
+                      <input type="email" id="title" name="lastname" placeholder="Title">
+
+                      <label for="subject"></label>
+                      <textarea style="height: 200px;" name="" id="subject" placeholder="Write sometings.."></textarea>
+                      <button type="submit" title="demo version">Submit <i class="far fa-paper-plane"></i></button>
+                  </form>
+            </div>
+      </div>
+    </div>
+
+{% endblock %}
+
+<div style="background: #222; min-height: 250px; text-align: center;" >
+    <br><br>
+
+<div class="col-md-12">
+        <div class="col-md-3" >
+            <ul style="list-style-type:none;">
+                <li><strong><a href="#">About us</a></strong></li>
+                <li><strong><a href="#">Contact</a></strong></li>
+                <li><strong><a href="#">Help and support</a></strong></li>
+                <li><strong><a href="#">Community</a></strong></li>
+            </ul>
+        </div>
+    <div class="col-md-3" >
+            <ul style="list-style-type:none;">
+                <li><strong><a href="#">Lorem Ipsum</a></strong></li>
+                <li><strong><a href="#">Lorem Ipsum</a></strong></li>
+                <li><strong><a href="#">Lorem Ipsum</a></strong></li>
+                <li><strong><a href="#">Lorem Ipsum</a></strong></li>
+            </ul>
+        </div>
+    <div class="col-md-3" >
+            <ul style="list-style-type:none;">
+                <li><strong><a href="#">About us</a></strong></li>
+                <li><strong><a href="#">Contact</a></strong></li>
+                <li><strong><a href="#">Help and support</a></strong></li>
+                <li><strong><a href="#">Community</a></strong></li>
+            </ul>
+    </div>
+    <div class="col-md-3" >
+            <ul style="list-style-type:none;">
+                <li><strong><a href="#">Lorem Ipsum</a></strong></li>
+                <li><strong><a href="#">Lorem Ipsum</a></strong></li>
+                <li><strong><a href="#">Lorem Ipsum</a></strong></li>
+                <li><strong><a href="#">Lorem Ipsum</a></strong></li>
+            </ul>
+    </div>
+</div>
+    <div style="text-align:center; padding:120px 0 50px 0;">
+        <a href="mailto:#" style="margin-left:15px;" title="mail"><i class="far fa-envelope social-icon"></i></a>
+        <a href="#" style="margin-left:15px;" title="linkedin"><i class="fab fa-linkedin-in social-icon"></i></a>
+        <a href="#" style="margin-left:15px;" title="twitter"><i class="fab fa-twitter social-icon"></i></a>
+        <a href="#" style="margin-left:15px;" title="github"><i class="fab fa-github social-icon"></i></a>
+    </div>
+</div>
+<script>
+
+var velocity = 0.1;
+
+function update(){
+    var pos = $(window).scrollTop();
+    $('.back').each(function() {
+        // subtract some from the height b/c of the padding
+        var height = 0;
+        $(this).css('backgroundPosition', '50%' + Math.round((height - pos) * velocity) + 'px');
+    });
+}
+
+$(window).bind('scroll', update);
+
+
+</script>
+
+
+
+</body>
+</html>

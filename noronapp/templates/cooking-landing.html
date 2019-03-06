@@ -1,0 +1,149 @@
+{% extends 'parallax.html'%}
+
+
+{% block title %}Cooking landing page{% endblock %}
+{% block home %}
+<style>
+    #cooking-page{
+        margin-top: -25px;
+        background-image: url("../static/images/food.jpeg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        height: 647px;
+    }
+
+    .populer-food{
+        background-image: url("../static/images/food.jpeg");
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        background-size: cover;
+        border: 4px solid #f2f2f2;
+        height: 500px;
+        opacity: 0.8;
+        -webkit-transition: opacity;
+        transition: 0.2s;
+        text-align: center;
+
+
+    }
+
+    .populer-food:hover{
+        opacity: 1;
+    }
+    #cooking-content{
+        width: 70%;
+        height: 400px;
+        background: white;
+        margin: auto;
+        padding: 20px;
+
+
+    }
+
+    #cooking-content h1{
+        color:#4d2600;
+        font-weight: bold;
+        text-align: center;
+        font-size: 100px;
+        text-decoration: underline;
+
+    }
+
+    #cooking-content h2{
+        color:#4d2600;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #recipes-button{
+        padding: 15px 25px 15px 25px;
+        background: white;
+        border: none;
+        color: #88cc00;
+        font-size: 20px;
+        font-weight: bold;
+        -webkit-transition: background-color, color;
+        transition: 0.2s;
+        margin-top:20px;
+    }
+
+    #recipes-button:hover{
+        background-color:#88cc00 ;
+        color: white;
+    }
+
+    #most-popular li{
+        font-size: 28px;
+        color:#88cc00 ;
+        border-bottom: 1px solid grey;
+        font-weight: bold;
+
+        -webkit-transition:color;
+        transition: 0.2s;
+    }
+
+    #most-popular li:hover{
+        color:#222;
+        cursor: pointer;
+    }
+
+    .hideme{
+        opacity:0;
+    }
+
+    @media screen and (max-width: 600px) {
+        #cooking-content h1 {font-size: 40px}
+        #most-popular li{font-size: 15px}
+        .hideme{opacity: 1;}
+
+
+        }
+
+</style>
+<div id="cooking-page">
+    <div class="container" style="padding-top: 150px">
+        <div id="cooking-content">
+            <h2>We Have More Than 40,000</h2>
+            <h1>Cooking </h1>
+            <h1>Recipes</h1>
+        </div>
+    </div>
+</div>
+
+<div class="container hideme" style="margin-top: 100px;">
+    <div class="col-sm-5">
+        <h1><b>Most Popular</b></h1>
+        <br>
+        <ol id="most-popular">
+            <li>How to Roast a Turkey in Just an Hour</li>
+            <li>How to Turn Mushrooms Into a Meaty Vegetarian Dinner</li>
+            <li>How to Make the Best of Cranberry Season</li>
+            <li>4 Brand New Casserole Recipes</li>
+            <li>These Are the Hot Dog Nachos of Your Dreams</li>
+        </ol>
+    </div>
+
+    <div class="col-sm-6 populer-food">
+        <h3 style="color:#4d2600; margin-top: 150px;"><b>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </b></h3>
+        <button id="recipes-button">view recipes</button>
+    </div>
+
+</div>
+<br><br>
+<script>
+    $(document).ready(function() {
+    $(window).scroll( function(){
+        $('.hideme').each( function(i){
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object -200 ){
+                $(this).animate({'opacity':'1'},500);
+            }
+        });
+    });
+});
+</script>
+{% endblock %}

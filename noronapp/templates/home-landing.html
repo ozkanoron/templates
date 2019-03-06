@@ -1,0 +1,208 @@
+{% extends 'parallax.html'%}
+{% block title %}Home landing page{% endblock %}
+{% block home %}
+<style>
+    #home-header{
+        width: 100%;
+        height: 600px;
+        margin-top:-25px;
+        background-image: url("../static/images/home.jpeg");
+        background-position: 50% 0;
+        background-size: cover;
+        color: white;
+    }
+
+    #home-bg{
+        width: 100%;
+        height: 600px;
+        background:rgba(0,0,0,0.7);
+
+    }
+
+    .home-content{
+        padding-top: 150px;
+    }
+
+    .home-content h1{
+        font-size: 50px;
+        letter-spacing: -10px;
+        font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    }
+
+    .home-content h2{
+        font-size: 30px;
+        letter-spacing: -10px;
+        font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    }
+
+    .angle-arrow{
+        text-align: center;
+        margin-top: 190px;
+        opacity: 0;
+    }
+
+    #home-button{
+        padding: 15px 25px 15px 25px;
+        color: white;
+        background-color: #092d4e;
+        border: solid 1px #092d4e;
+        -webkit-transition: color, background-color, border ;
+        transition: 0.3s;
+    }
+    #home-content{
+
+    }
+    .post{
+        box-shadow: 0 0 5px grey;
+        min-height: 250px;
+        margin:0 0 20px 70px;
+        padding: 0;
+    }
+    .img1{background-image: url("../static/images/sofa.jpg");}
+    .img2{background-image: url("../static/images/lcd.jpg");}
+    .icon-img{
+        width: 100%;
+        height: 150px;
+        background-position: 50% 0;
+        background-size: cover;
+        text-align: center;
+        padding-top: 50px;
+        opacity: 0.6;
+        -webkit-transition: opacity;
+        transition: 0.2s;
+
+    }
+    .post-button{
+        padding: 15px 25px 15px 25px;
+        color: white;
+        background-color: #092d4e;
+        border: solid 1px #092d4e;
+        -webkit-transition: opacity ;
+        transition: 0.2s;
+        opacity: 0;
+    }
+
+    .icon-img:hover{
+        opacity: 1;
+    }
+
+    .icon-img:hover .post-button{
+        opacity: 1;
+    }
+
+    @media screen and (max-width: 600px) {
+        .icon-img{opacity: 1;}
+        .post-button{opacity: 1;}
+        .angle-arrow{ margin-top: 150px;}
+        .post{border: solid 1px;height: 150px;margin:0 0 20px 0;}
+        .home-content h2{font-size: 25px; letter-spacing:0;}
+        .home-content h1{font-size: 40px; letter-spacing:0;}
+        }
+
+
+
+</style>
+
+<div id="home-header">
+    <div id="home-bg">
+        <div class="container home-content">
+            <h1>Example Lorem Ipsum Text</h1>
+            <h2>Example Lorem Ipsum Text</h2>
+        </div>
+        <div class="container angle-arrow">
+            <button id="home-button">Lorem Ipsum</button>
+            <h1><a href="#home-content" style="color: white;"><i class="fas fa-angle-down"></i></a></h1>
+        </div>
+    </div>
+</div>
+
+
+<div class="container" id="home-content">
+    <div class="col-sm-12">
+        <div style="text-align: center; margin: 50px 0 50px 0">
+            <h1><b>Lorem Ipsum</b></h1>
+        </div>
+
+        <div class="col-sm-3 post">
+            <div class="col-sm-12 icon-img img1">
+                <button class="post-button">view detail</button>
+            </div>
+            <div class="col-sm-12">
+                <h4>lorem ipsum</h4>
+                <p>Price: <b>152$</b></p>
+                <p>Location: <b>Izmir/Bornova, Turkey</b></p>
+            </div>
+        </div>
+        <div class="col-sm-3 post">
+            <div class="col-sm-12 icon-img img2">
+                <button class="post-button">view detail</button>
+            </div>
+            <div class="col-sm-12">
+                <h4>lorem ipsum</h4>
+                <p>Price: <b>450$</b></p>
+                <p>Location: <b>Istanbul/Pendik, Turkey</b></p>
+            </div>
+        </div>
+
+        <div class="col-sm-3 post">
+            <div class="col-sm-12 icon-img img2">
+                <button class="post-button">view detail</button>
+            </div>
+            <div class="col-sm-12">
+                <h4>lorem ipsum</h4>
+                <p>Price: <b>450$</b></p>
+                <p>Location: <b>Istanbul/Pendik, Turkey</b></p>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="col-sm-12">
+        <div class="col-sm-3 post">
+            <div class="col-sm-12 icon-img img1">
+                <button class="post-button">view detail</button>
+            </div>
+            <div class="col-sm-12">
+                <h4>lorem ipsum</h4>
+                <p>Price: <b>152$</b></p>
+                <p>Location: <b>Izmir/Bornova, Turkey</b></p>
+            </div>
+        </div>
+        <div class="col-sm-3 post">
+            <div class="col-sm-12 icon-img img2">
+                <button class="post-button">view detail</button>
+            </div>
+            <div class="col-sm-12">
+                <h4>lorem ipsum</h4>
+                <p>Price: <b>450$</b></p>
+                <p>Location: <b>Istanbul/Pendik, Turkey</b></p>
+            </div>
+        </div>
+        <div class="col-sm-3 post">
+            <div class="col-sm-12 icon-img img1">
+                <button class="post-button">view detail</button>
+            </div>
+            <div class="col-sm-12">
+                <h4>lorem ipsum</h4>
+                <p>Price: <b>152$</b></p>
+                <p>Location: <b>Izmir/Bornova, Turkey</b></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        var anim = $("h1");
+        var anim2 = $("h2");
+        var anim3 = $(".angle-arrow");
+        anim.animate({letterSpacing: "0"}, 400);
+        anim2.animate({letterSpacing: "0"}, 500);
+        anim3.animate({opacity: "1"}, 600);
+
+    });
+
+
+
+
+</script>
+{% endblock %}

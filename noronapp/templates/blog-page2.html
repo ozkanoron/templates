@@ -1,0 +1,161 @@
+{% extends 'parallax.html'%}
+{% block title %}Blog page-2{% endblock %}
+{% block home %}
+
+<style>
+    #blog-header{
+        margin-top: -25px;
+        width: 100%;
+        height: 700px;
+        background-size: cover;
+        background-image: url("../static/images/avengers.jpg");
+        box-shadow: 0 5px 25px black;
+    }
+
+    .blog-header-bg{
+        width: 100%;
+        height: 700px;
+        background:rgba(0,0,0,0.7);
+
+
+    }
+    .blog-content{
+        padding-top:400px;
+        color:white;
+        text-align: center;
+
+    }
+    p{
+        font-size: 20px;
+    }
+    h1{font-weight: bold;}
+
+    #blog-section-2{
+
+        background-size: cover;
+        padding:0;
+
+        box-shadow: 2px 2px 25px black;
+        margin-top: 25px;
+    }
+
+    .other-artic span{
+        color:#336699;
+        font-weight: bold;
+
+
+    }
+
+    .other-artic span:hover{
+        cursor: pointer;
+        color: #264d73;
+    }
+</style>
+<script id="dsq-count-scr" src="//templatess.disqus.com/count.js" async></script>
+<div id="blog-header">
+<div class="blog-header-bg">
+    <div class="container blog-content">
+        <h1 style="font-size: 50px;">What will be happen in Avengers End Game ?</h1>
+    </div>
+</div>
+</div>
+<div class="container">
+    <div class="col-sm-12">
+        <div style="text-align: center;">
+            <br>
+            <h1>Who will die ?</h1>
+        </div>
+        <br>
+        <div class="col-sm-8">
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+                Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor
+                at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,
+                from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered
+            </p>
+            <p>
+                the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum
+                et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on
+                the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
+                "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+                Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor
+                at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,
+                from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered
+            </p>
+        </div>
+        <div class="col-sm-4" style="text-align: center;">
+            <img id="capt" src="../static/images/captain.png" alt="Captain America" title="Captain America" width="250px;" class="img-responsive">
+        </div>
+    </div>
+
+        <div class="col-sm-12">
+        <div style="text-align: center;">
+            <h1>Who will win ?</h1>
+        </div>
+        <br>
+            <div class="col-sm-6" style="text-align: center;">
+            <img id="capt2" src="../static/images/thanos.jpg" alt="Thanos" title="Thanos" width="500px;" class="img-responsive" >
+        </div>
+        <div class="col-sm-6">
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+                Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor
+                at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,
+                from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered
+            </p>
+            <p>
+                the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum
+                et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on
+                the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum,
+                "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+
+        </div>
+
+    </div>
+</div>
+
+<div class="container" id="blog-section-2" title="endgame">
+    <img src="../static/images/endgame.jpg" alt="" width="100%" class="img-responsive">
+
+</div>
+
+<div class="container">
+    <br><br>
+        <div style="text-align:center;">
+            <h1>Lorem Ipsum Title</h1>
+        </div>
+            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical
+                Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor
+                at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur,
+                from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered
+            </p>
+</div>
+
+
+
+<div class="container">
+    <div>
+        <h3><span class="label label-primary">Comments</span></h3>
+    </div>
+    <div id="disqus_thread"></div>
+    <script>
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://templatess.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+<div class="container other-artic">
+    <hr>
+    <div>
+        <h3>Other articles that may be of interest to you.</h3>
+        <p><span>Who is Dormammu ?</span>/ <span>Life of Stan Lee</span>/ <span>What are the powers of captain Mar...</span></p>
+    </div>
+</div>
+<br><br>
+{% endblock %}

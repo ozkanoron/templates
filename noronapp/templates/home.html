@@ -1,0 +1,56 @@
+{% extends 'parallax.html'%}
+
+{% block title %}Home{% endblock %}
+{% block home %}
+
+<style>
+    .body{
+        margin-top:-20px;
+        min-height: 700px;
+        width: 100%;
+        background: #009FFF;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #ec2F4B, #009FFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+    }
+    .home-content{
+
+        color: #222;
+        text-align: center;
+        padding-top: 120px;
+    }
+
+    .fade-in{ display: none; font-size: 45px; color: #222 }
+    .fade-in2{ display: none; }
+    .fade-in-image { display: none;  }
+    #avatar{border-radius: 75px;}
+
+
+</style>
+   <div class="body">
+       <div class="container home-content">
+           <div class="fade-in-image" style="text-align: center;">
+               <img id="avatar" src="../static/images/img_avatar.png" alt="" width="150px">
+               <br><br>
+               <p>Ozkan Kurun </p>
+               <p>Web Developer</p>
+
+           </div>
+           <div style="text-align: center;">
+               <h1 class="fade-in">Welcome</h1>
+               <h2 class="fade-in2"> This website contains some web pages that I made</h2>
+           </div>
+       </div>
+   </div>
+
+<script>
+    $(document).ready(function () {
+    $('.fade-in-image').fadeIn(600).removeClass('hidden');
+    $('h1.fade-in').fadeIn(1000).removeClass('hidden');
+    $('h2.fade-in2').fadeIn(1400).removeClass('hidden');
+
+});
+
+</script>
+{% endblock %}

@@ -1,0 +1,185 @@
+{% extends 'parallax.html'%}
+{% block title %}Blog page{% endblock %}
+{% block home %}
+<style>
+    #blog-body{
+        width: 100%;
+        margin-top:-25px;
+        background: #EFEFBB;
+        background: -webkit-linear-gradient(to right, #D4D3DD, #EFEFBB);
+        background: linear-gradient(to right, #D4D3DD, #EFEFBB);
+
+    }
+    #blog-header{
+        text-align: center;
+    }
+
+    .image1{background-image: url("../static/images/space.jpg");}
+    .image2{background-image: url("../static/images/noron.jpg");}
+    .content-img{
+
+        background-size: cover;
+        height: 220px;
+        width: 100%;
+
+    }
+
+    .col-sm-11{
+        background-color: white;
+        padding: 0;
+        box-shadow: 2px 2px 25px grey;
+        margin-bottom: 55px;
+
+    }
+
+    .content{
+        padding: 15px;
+
+
+    }
+    .content-footer{
+        height: 70px;
+        padding-left: 15px;
+    }
+    .blog-side{
+        min-height: 150px;
+        background: white;
+        margin-bottom: 25px;
+    }
+    .populer-post{
+        height:70px;
+        border-bottom: solid 1px #e6e6e6;
+
+    }
+    .populer-post:hover{
+        background:#e6e6e6 ;
+        cursor: pointer;
+    }
+
+    .small-img{
+        background-image: url("../static/images/space.jpg");
+        height: 50px;
+        width: 50px;
+        background-size: cover;
+        margin-top:9px;
+        margin-right: 15px;
+        float: left;
+    }
+
+    .blog-pagi{
+
+        margin-top: 55px;
+    }
+
+    .pagination{
+        padding:10px 20px 10px 20px;
+        border: solid;
+        text-align: center;
+        cursor: pointer;
+        -webkit-transition: color, background, border;
+        transition: 0.2s;
+    }
+</style>
+
+<div id="blog-body">
+    <div class="container">
+        <div id="blog-header">
+            <br><br>
+            <h2><b>WELCOME TO MY BLOG</b></h2>
+            <p><i>Pointless blog :)</i></p>
+            <br><br>
+        </div>
+
+        <div id="blog-content">
+            <div class="col-sm-8">
+                <div class="col-sm-11">
+                <div class="content-img image1">
+                </div>
+                <div class="content">
+                        <h2><b>We are not alone</b></h2>
+                    <p><i class="fas fa-user"></i> <i>John Doe</i> | <i class="far fa-clock"></i> <i>March 2, 2019</i></p>
+                    <br>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                        distribution of letters, as opposed to using 'Content here...
+                    </p>
+                </div>
+                <div class="content-footer">
+                    <hr>
+                    <button type="button" class="btn btn-default">Read more</button>
+                    <p style="float: right; margin:7px 55px 0 0;"><b>Comments</b> <span class="badge">10</span></p>
+                </div>
+            </div>
+
+            <div class="col-sm-11">
+                <div class="content-img image2">
+                </div>
+                <div class="content">
+                        <h2><b>How the human brain works?</b></h2>
+                    <p><i class="fas fa-user"></i> <i>Arturo</i> | <i class="far fa-clock"></i> <i>February 15, 2019</i></p>
+                    <br>
+                    <p>It is a long established fact that a reader will be distracted by the readable content of a page
+                        when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                        distribution of letters, as opposed to using 'Content here...
+                    </p>
+                </div>
+                <div class="content-footer">
+                    <hr>
+                    <button type="button" class="btn btn-default">Read more</button>
+                    <p style="float: right; margin-right: 55px;"><b>Comments</b> <span class="badge">8</span></p>
+                </div>
+            </div>
+      </div>
+            <div class="col-sm-4 blog-side">
+                <div style="padding-top:5px;">
+                    <h3>Tags</h3>
+                    <hr>
+                    <span class="label label-primary">Python</span>
+                    <span class="label label-primary">Django</span>
+                    <span class="label label-primary">HTML5</span>
+                    <span class="label label-primary">CSS3</span>
+                    <span class="label label-primary">jQuery</span>
+                    <span class="label label-primary">Javascript</span>
+                    <span class="label label-primary">Github</span>
+                </div>
+            </div>
+            <div class="col-sm-4 blog-side" style="padding: 0;" >
+                <div style="padding:5px 0 0 15px;">
+                    <h3>Popular Posts</h3>
+                    <hr>
+                </div>
+
+                <div class="col-sm-12 populer-post">
+                    <div class="small-img"></div>
+                    <div>
+                        <h4><b>We are not alone</b></h4>
+                        <p>It is a long established fact that...</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 populer-post">
+                    <div class="small-img"></div>
+                    <div>
+                        <h4><b>We are not alone</b></h4>
+                        <p>It is a long established fact that...</p>
+                    </div>
+                </div>
+                <div class="col-sm-12 populer-post">
+                    <div class="small-img"></div>
+                    <div>
+                        <h4><b>We are not alone</b></h4>
+                        <p>It is a long established fact that...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 blog-pagi">
+                <div class="pagination"><i class="fas fa-angle-left"></i></div>
+                    2/10
+                <div class="pagination"> <i class="fas fa-angle-right"></i></div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+</div>
+
+
+{% endblock %}

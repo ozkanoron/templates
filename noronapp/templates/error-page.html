@@ -1,0 +1,50 @@
+{% extends 'parallax.html'%}
+{% block title %}404{% endblock %}
+{% block home %}
+<style>
+    #error-body{
+        width: 100%;
+        margin-top: -25px;
+        background-image: url("../static/images/error-img.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        min-height: 750px;
+    }
+    #error-body-bg{
+        width:100%;
+        min-height: 750px;
+        background:rgba(0,0,0,0.6);
+        padding-top: 150px;
+    }
+    #error-content{
+        color: white;
+        text-align: center;
+    }
+    #big-font{
+        font-size: 100px;
+        font-weight: bold;
+    }
+    #error-button{
+        background: transparent;
+        padding: 10px 25px 10px 25px;
+        margin-top: 25px;
+        border: solid 2px white;
+        font-size: 20px;
+    }
+
+</style>
+<div id="error-body">
+    <div id="error-body-bg">
+    <div class="container" id="error-content">
+        <h1><b>Company Name</b></h1>
+        <h1  id="big-font">404</h1>
+        <h2><b>PAGE NOT FOUND</b></h2>
+        <h3>Sorry, but the page you requested doesn't exist</h3>
+        <button id="error-button">Contiune to Our Home Page</button>
+        <br><br>
+        <p>© 2015 - 2019 Lorem® Global Inc.</p>
+    </div>
+    </div>
+</div>
+{% endblock %}

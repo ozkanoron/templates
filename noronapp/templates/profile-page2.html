@@ -1,0 +1,220 @@
+{% extends 'parallax.html'%}
+{% block title %}Profile page-2{% endblock %}
+
+{% block home %}
+
+<style>
+    .avatar{
+        border-radius: 100px;
+        float: left;
+        margin:20px 20px 0 0 ;
+    }
+    .col-center{border-left: 2px solid white}
+    .col-center{border-right: 2px solid white}
+    .followers{text-align: center;}
+    .followers p{color:#337ab7;}
+    .skills{
+        width: 100px;
+        height: 100px;
+        border-radius: 100px;
+        padding-top: 28px;
+        margin-left: 35px;
+        margin-bottom: 15px;
+        text-align: center;
+        cursor: pointer;
+        -webkit-transition: padding-top;
+        transition: 0.2s;
+    }
+
+    .skills:hover{
+        padding-top: 20px;
+    }
+    .html{
+        border:solid 1px red;
+        float: left;
+        color:red;
+    }
+
+    .css{
+        border:solid 1px green;
+        float: left;
+        color:green;
+    }
+
+    .js{
+
+        border:solid 1px darkred;
+        float: left;
+        color:darkred;
+
+    }
+
+    .JQ{
+        border:solid 1px orange;
+        float: left;
+        color: orange;
+    }
+
+    .python{
+        border:solid 1px grey;
+        float: left;
+        color: grey;
+
+    }
+
+    .django{
+        border:solid 1px darkgreen;
+        float: left;
+        color: darkgreen;
+    }
+
+    .boots{
+        border:solid 1px rebeccapurple;
+        float: left;
+        color: rebeccapurple;
+    }
+
+    .psd{
+        border:solid 1px dodgerblue;
+        float: left;
+        color: dodgerblue;
+
+    }
+    .other-exp{
+        box-shadow: 0 0 5px grey;
+        padding: 0;
+        margin-top: 50px;
+    }
+    .experience{
+        padding: 25px;
+        border-bottom:solid 1px #e6e6e6;
+        -webkit-transition: font-weight;
+        transition: 0.2s;
+
+    }
+
+    .experience:hover{
+        cursor: pointer;
+        font-weight:bold;
+        color:#337ab7;
+    }
+
+</style>
+
+<br><br><br>
+
+    <div class="container">
+
+
+    <div class="col-sm-12" style="padding: 0; box-shadow: 0 0 5px grey">
+            <div style="background:#f2f2f2; min-height: 150px; border-bottom: 2px solid #337ab7; padding:2px 20px 2px 20px ">
+                <img class="avatar" src="../static/images/img_avatar.png" alt="" width="100px" >
+                <br>
+                <h3><strong>John Doe</strong></h3>
+                <p><i class="fas fa-map-marker-alt"></i> <b>Izmir/Bornova, Turkey</b>- 12:14 pm local time</p>
+            </div>
+            <div style="background-color: white; padding:2px 20px 2px 20px">
+                <h4><b>Web and Software Development</b></h4>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of
+                type and scrambled it to make a type specimen book. It has survived not only five centuries,
+                but also the leap into electronic typesetting, remaining essentially unchanged.
+            </p>
+
+            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+                printer took a galley of
+                type and scrambled it to make a type specimen book. It has survived not only five centuries..
+            </p>
+                <hr>
+                <div class="col-sm-12 followers" >
+                    <div class="col-sm-4">
+                        <h3><b>$15.00</b></h3>
+                        <p>Hourly rate</p>
+                    </div>
+                    <div class="col-sm-4 col-center" >
+                        <h3><b>$40k+</b></h3>
+                        <p>Total earned</p>
+                    </div>
+                    <div class="col-sm-4" >
+                        <h3><b>110</b></h3>
+                        <p>Total job</p>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+
+    <div class="col-sm-12 all-skills">
+        <div style="text-align: center; margin: 30px 0 10px 0;">
+            <h3><strong>Skills</strong></h3>
+            <h3><i class="fas fa-angle-down"></i></h3>
+        </div>
+
+        <div  class="html skills" data-toggle="tooltip" data-placement="top" title="HTML5 is a language for structuring and presenting content for the World Wide Web, and is a core technology of the Internet originally proposed by Opera Software. It is the fifth revision of the HTML standard.">
+            <h4>HTML5</h4>
+        </div>
+        <div  class="css skills" data-toggle="tooltip" data-placement="top" title="Cascading Style Sheets (CSS) is a style sheet language used to describe the presentation (that is, the look and formatting) of a document written in a markup language.">
+            <h4>CSS3</h4>
+
+        </div>
+
+        <div class="js skills" data-toggle="tooltip" data-placement="top" title="JavaScript is a prototype-based scripting language that is dynamic, weakly typed and has first-class functions. It is a multi-paradigm language, supporting object-oriented, imperative, and functional programming styles.">
+            <h4>Javascript</h4>
+        </div>
+
+        <div  class="JQ skills" data-toggle="tooltip" data-placement="top" title="jQuery is a cross-browser JavaScript library designed to simplify the client-side scripting of HTML. Its syntax is designed to make it easier to navigate a document, select DOM elements, create animations, handle events, and develop Ajax applications.">
+            <h4>JQuery</h4>
+
+        </div>
+
+        <div  class="python skills" data-toggle="tooltip" data-placement="top" title="Python is a general-purpose, high-level programming language whose design philosophy emphasizes code readability. Python claims to combine 'remarkable power with very clear syntax', and its standard library is large and comprehensive.">
+            <h4>Python</h4>
+
+        </div>
+
+        <div  class="django skills" data-toggle="tooltip" data-placement="top" title="Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design.">
+           <h4>Django</h4>
+
+        </div>
+
+        <div  class="boots skills" data-toggle="tooltip" data-placement="top" title="Bootstrap is a popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.">
+            <h4>Bootstrap</h4>
+
+        </div>
+
+        <div  class="psd skills" data-toggle="tooltip" data-placement="top" title="PSD to HTML conversion is the process of converting a PSD (Photoshop document) template to functional HTML web page.">
+            <h4>Psd to HTML</h4>
+
+        </div>
+    </div>
+
+
+</div>
+
+<div class="container other-exp">
+        <div style="padding: 25px; background-color: #f2f2f2; margin: 0;">
+            <h2>My Experience</h2>
+        </div>
+
+        <div class="experience" style=" ">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry... </p>
+        </div>
+
+        <div class="experience" style=" ">
+            <p>It is a long established fact that a reader will be distracted by... </p>
+        </div>
+
+        <div class="experience" style=" ">
+            <p>There are many variations of passages of Lorem Ipsum available...  </p>
+        </div>
+
+</div>
+ <br><br>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+{% endblock %}

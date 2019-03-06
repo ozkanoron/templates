@@ -1,0 +1,116 @@
+{% extends 'parallax.html'%}
+{% block title %}Profile page{% endblock %}
+{% block home %}
+<br><br><br>
+
+<style>
+    #avatar{
+        border:solid white 5px;
+        margin-top:20px;
+        box-shadow: 0 0 25px 0;
+        border-radius: 125px;
+        -webkit-transition: border, box-shadow;
+        transition: 0.2s;
+
+    }
+    body{background: #f2f2f2;}
+    #avatar-div{
+        text-align: center;
+        background-image:url("../static/images/backimg.JPG");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%
+    }
+    /* background-image: linear-gradient(to right, #d9d9d9, #bfbfbf, #d9d9d9); */
+    .info-user{
+        border:solid #f2f2f2 5px;
+        min-height: 150px;
+
+        background: white;
+        -webkit-transition: margin;
+        transition: 0.2s;
+    }
+    .info-user:hover{margin-top:-10px;}
+
+    .user-cv{
+        border:solid #f2f2f2 5px;
+        min-height: 150px;
+        background: white;
+        margin-top:20px;}
+
+
+</style>
+
+<div class="container">
+    <div id="avatar-div" >
+        <div style="background:rgba(0,0,0,0.7);">
+            <img id="avatar" src="../static/images/img_avatar.png"  alt="" width="250px">
+        <br>
+        <h4><i style="color: white;" >John Doe </i></h4>
+        <p><i style="color: white;" >Web Developer</i></p>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="col-sm-4 info-user">
+        <div style="border-bottom:solid 2px; text-align: center;"><h3>Web Development</h3></div>
+        <br><br>
+        <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+            when an unknown printer took a galley of type and scrambled it to make a type specimen.
+        </p>
+    </div>
+    <div class="col-sm-4 info-user">
+        <div style="border-bottom:solid 2px; text-align: center;"><h3>UI/UX desing</h3></div>
+        <br><br>
+        <p>
+            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration
+            in some form, by injected humour, or randomised words which don't look even slightly believable.
+        </p>
+    </div>
+    <div class="col-sm-4 info-user">
+        <div style="border-bottom:solid 2px; text-align: center;"><h3>Database programming</h3></div>
+        <br><br>
+        <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat.
+        </p>
+    </div>
+
+    <div class="col-sm-12 user-cv">
+        <div style="border-bottom:solid 1px;"><h3>What i have done before?</h3></div>
+        <br><br>
+        <p>
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat.
+        </p>
+
+        <p>
+            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+            Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced
+            in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+        </p>
+    </div>
+
+    <div class="col-sm-12 user-cv">
+        <div style="border-bottom:solid 1px;"><h3>My skils</h3></div>
+        <br><br>
+        <span class="label label-default">Python</span>
+        <span class="label label-success">Django</span>
+        <span class="label label-info">HTML5</span>
+        <span class="label label-primary">CSS3</span>
+        <span class="label label-warning">JQuery</span>
+        <span class="label label-info">Bootstrap</span>
+        <span class="label label-danger">Javascript</span>
+        <span class="label label-info">PSD to HTML</span>
+    </div>
+
+</div>
+
+
+<br><br><br>
+
+{% endblock %}

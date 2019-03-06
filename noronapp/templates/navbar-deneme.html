@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <style>
+        @import 'https://fonts.googleapis.com/css?family=Raleway';
+        body{font-family:Raleway;}
+        ul.navbar-nav > li{margin-right: 15px;}
+        ul.nav >a {color:white;}
+        .navbar-inverse{background: #222; border:solid 2px #222; border-radius: 0; box-shadow: 0 0 20px 0px; }
+        .navli{
+            height: 58px;
+            color:#336699 !important;
+            margin-top: 9px;
+            min-height: 35px;
+            font-size: 19px;
+            border-bottom: solid #222 1px;
+            -webkit-transition: color, margin, border-bottom-color;
+            transition: 0.2s;}
+        .navli:hover{color:white !important; border-bottom-color:#336699;}
+
+        ul.dropdown-menu >li>a{-webkit-transition: margin; transition: 0.2s;}
+        ul.dropdown-menu >li>a:hover{margin-left:3px; font-weight:bold;}
+
+        .navbar-brand{
+            -webkit-transform: rotate(-5deg);
+            margin-top: 9px;
+            font-size:25px;
+            font-weight: bold;
+            background: -webkit-linear-gradient(#336699, white);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-transition: rotate;
+            transition: 0.2s;
+        }
+
+        .navbar-brand:hover{-webkit-transform: rotate(0deg);}
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse" style="min-height: 70px;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#" style="margin-right: 80px; color:#336699;">Templates</a>
+    </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+              <li><a href="#" class="navli">Landing</a></li>
+              <li class="dropdown">
+                  <a class="dropdown-toggle navli" data-toggle="dropdown" href="#">Blog<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#">Blog sport</a></li>
+                      <li><a href="#">Blog life</a></li>
+                      <li><a href="#">Blog only content</a></li>
+                      <li><a href="#">Blog bla</a></li>
+                      <li><a href="#">Blog bla</a></li>
+                  </ul>
+              </li>
+              <li><a href="#" class="navli">Parallax</a></li>
+              <li><a href="#" class="navli">Profile</a></li>
+              <li><a href="#" class="navli">About us</a></li>
+              <li class="dropdown">
+                  <a class="dropdown-toggle navli" data-toggle="dropdown" href="#" >Other page<span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#">404 error page</a></li>
+                      <li><a href="#">Blog life</a></li>
+                      <li><a href="#">Blog only content</a></li>
+                      <li><a href="#">Blog bla</a></li>
+                      <li><a href="#">Blog bla</a></li>
+                  </ul>
+              </li>
+          </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container">
+    <h1>selam patates</h1>
+</div>
+
+</body>
+</html>

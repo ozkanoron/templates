@@ -1,0 +1,158 @@
+{% extends 'parallax.html'%}
+{% block title %}Gallery{% endblock %}
+{% block home %}
+
+<style>
+
+    .gallery-img{
+        height: 250px;
+        box-shadow: 2px 2px 5px grey;
+        margin:0 0 20px 70px;
+        background-size: cover;
+        background-position: 50% 0;
+        padding: 0;
+    }
+
+    .gallery-bg{
+        height: 250px;
+        width: 100%;
+        -webkit-transition: background-color;
+        transition: 0.2s;
+        color: white;
+        text-align: center;
+    }
+    .p-style{
+        font-weight: bold;
+        position: absolute;
+        bottom:0;
+        opacity: 0;
+        -webkit-transition: opacity;
+        transition: 0.2s;
+    }
+    .gallery-p{left: 15px;}
+    .gallery-p2{right: 15px; font-size: 20px;}
+    .gallery-bg:hover .p-style{
+        opacity: 1;
+
+    }
+    .gallery-bg:hover{
+        background:rgba(0,0,0,0.7);
+        cursor: zoom-in;
+    }
+
+    .img1{background-image: url("../static/images/team.jpeg");}
+    .img2{background-image: url("../static/images/meeting.jpeg")}
+    .img3{background-image: url("../static/images/noron.jpg")}
+    .img4{background-image: url("../static/images/food.jpeg")}
+    .img5{background-image: url("../static/images/avengers.jpg")}
+    .img6{background-image: url("../static/images/contact.jpg")}
+    .img7{background-image: url("../static/images/training.jpeg")}
+    .img8{background-image: url("../static/images/thanos.jpg")}
+    .modal-dialog{
+        width:600px !important;
+    }
+    @media screen and (max-width: 600px) {
+            .gallery-img{margin:0 0 20px 0;}
+            .modal-dialog{width:auto;}
+
+        }
+</style>
+
+<div>
+    <div class="container">
+        <div style="text-align: center;"><h1><b>Gallery</b></h1></div>
+        <br>
+        <div class="col-sm-12">
+            <div class="modal fade" id="img1" role="dialog">
+                <div class="modal-dialog">
+                    <img src="../static/images/team.jpeg" alt="" width="100%">
+                </div>
+            </div>
+            <div class="modal fade" id="img2" role="dialog">
+                <div class="modal-dialog">
+                    <img src="../static/images/meeting.jpeg" alt="" width="100%">
+                </div>
+            </div>
+            <div class="modal fade" id="img3" role="dialog">
+                <div class="modal-dialog">
+                    <img src="../static/images/noron.jpg" alt="" width="100%">
+                </div>
+            </div>
+            <div class="modal fade" id="img4" role="dialog">
+                <div class="modal-dialog">
+                    <img src="../static/images/food.jpeg" alt="" width="100%">
+                </div>
+            </div>
+            <div class="modal fade" id="img5" role="dialog">
+                <div class="modal-dialog">
+                    <img src="../static/images/avengers.jpg" alt="" width="100%">
+                </div>
+            </div>
+            <div class="modal fade" id="img6" role="dialog">
+                <div class="modal-dialog">
+                    <img src="../static/images/contact.jpg" alt="" width="100%">
+                </div>
+            </div>
+            <div class="modal fade" id="img7" role="dialog">
+                <div class="modal-dialog">
+                    <img src="../static/images/training.jpeg" alt="" width="100%">
+                </div>
+            </div>
+            <div class="modal fade" id="img8" role="dialog">
+                <div class="modal-dialog">
+                    <img src="../static/images/thanos.jpg" alt="" width="100%">
+                </div>
+            </div>
+
+
+            <div class="col-sm-3 gallery-img img1" data-toggle="modal" data-target="#img1">
+                <div class="gallery-bg">
+                    <p class="gallery-p p-style">Lorem Ipsum</p>
+                    <p class="gallery-p2 p-style"><i class="far fa-heart"></i></p>
+                </div>
+            </div>
+            <div class="col-sm-3 gallery-img img2" data-toggle="modal" data-target="#img2">
+                <div class="gallery-bg">
+                    <p class="gallery-p p-style">Lorem Ipsum</p>
+                    <p class="gallery-p2 p-style"><i class="far fa-heart"></i></p>
+                </div>
+            </div>
+
+            <div class="col-sm-3 gallery-img img3" data-toggle="modal" data-target="#img3">
+            <div class="gallery-bg">
+                    <p class="gallery-p p-style">Lorem Ipsum</p>
+                    <p class="gallery-p2 p-style"><i class="far fa-heart"></i></p>
+                </div></div>
+            <div class="col-sm-5 gallery-img img4" data-toggle="modal" data-target="#img4">
+            <div class="gallery-bg">
+                    <p class="gallery-p p-style">Lorem Ipsum</p>
+                    <p class="gallery-p2 p-style"><i class="far fa-heart"></i></p>
+                </div></div>
+            <div class="col-sm-5 gallery-img img8" data-toggle="modal" data-target="#img8">
+            <div class="gallery-bg">
+                    <p class="gallery-p p-style">Lorem Ipsum</p>
+                    <p class="gallery-p2 p-style"><i class="far fa-heart"></i></p>
+                </div></div>
+            <div class="col-sm-6 gallery-img img5" data-toggle="modal" data-target="#img5">
+            <div class="gallery-bg">
+                    <p class="gallery-p p-style">Lorem Ipsum</p>
+                    <p class="gallery-p2 p-style"><i class="far fa-heart"></i></p>
+                </div></div>
+            <div class="col-sm-4 gallery-img img6" data-toggle="modal" data-target="#img6">
+            <div class="gallery-bg">
+                    <p class="gallery-p p-style">Lorem Ipsum</p>
+                    <p class="gallery-p2 p-style"><i class="far fa-heart"></i></p>
+                </div></div>
+            <div class="col-sm-11 gallery-img img7" data-toggle="modal" data-target="#img7">
+            <div class="gallery-bg">
+                    <p class="gallery-p p-style">Lorem Ipsum</p>
+                    <p class="gallery-p2 p-style"><i class="far fa-heart"></i></p>
+                </div></div>
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}
